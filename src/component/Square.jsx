@@ -1,15 +1,11 @@
 import { useState } from "react";
 
-function Square() {
-  const [value, setValue] = useState(null);
-
-  function handleClick() {
-    setValue("X");
-  }
-
+function Square({ value, onSquareClick }) {
   return (
-    <div>
-      <button onClick={handleClick}>{value}</button>
+    <div className="flex flex-row bg-gray-600">
+      <button className="bg-white " onClick={onSquareClick}>
+        {value}
+      </button>
     </div>
   );
 }
